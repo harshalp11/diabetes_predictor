@@ -1,0 +1,58 @@
+machine learning algorithms which can be used instead of support vector machine:
+# Machine Learning Algorithms for Diabetes Prediction
+
+
+## 1. Support Vector Machine (SVM)
+from sklearn.svm import SVC
+model = SVC(kernel='linear')
+model.fit(X_scaled, y)
+
+## 2. Logistic Regression
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_scaled, y)
+
+## 3. Random Forest Classifier
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100, random_state=0)
+model.fit(X_scaled, y)
+
+## 4. K-Nearest Neighbors (KNN)
+from sklearn.neighbors import KNeighborsClassifier
+model = KNeighborsClassifier(n_neighbors=5)
+model.fit(X_scaled, y)
+
+## 5. Decision Tree
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier()
+model.fit(X_scaled, y)
+
+## 6. Gradient Boosting (XGBoost)
+from xgboost import XGBClassifier
+model = XGBClassifier()
+model.fit(X_scaled, y)
+
+# To install XGBoost:
+# pip install xgboost
+
+## Model Usage Example
+
+Replace the current model code in diabeties.py like this:
+
+# Old:
+from sklearn.svm import SVC
+model = SVC(kernel='linear')
+
+# New (example with RandomForest):
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+
+## Recommended Use Cases
+
+- Logistic Regression: Good for small and clean datasets
+- Random Forest: Great balance between accuracy and speed
+- KNN: Simple, good for small datasets
+- Decision Tree: Interpretable and fast, may overfit
+- XGBoost: Best for accuracy, works well on structured/tabular data
+- SVM: Good for high-dimensional data, slower on large sets
+
